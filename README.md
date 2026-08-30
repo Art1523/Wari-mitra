@@ -1,14 +1,6 @@
-# Welcome to your Lovable project
+# WariMitra AI
 
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+WariMitra AI is a voice-first prototype for helping pilgrims and rural users find essential services such as medical camps, toilets, food, pharmacies, rest points and help desks through spoken Marathi queries.
 
 ## Development
 
@@ -27,6 +19,7 @@ npm run dev
 - TypeScript
 - React
 - Tailwind CSS
+- PostgreSQL
 
 
 ## WariMitra AI — voice call prototype
@@ -74,8 +67,7 @@ installed.
 
 ### Persistence
 
-All state lives in `localStorage` behind `src/services/*`, so a FastAPI + PostgreSQL
-backend can replace it without touching components. No Supabase.
+All state currently lives in `localStorage` behind `src/services/*`. The intended production backend is PostgreSQL, which can replace the local demo data layer without changing the UI components. No Supabase.
 
 ## EXOTEL PHONE AGENT SETUP
 
@@ -109,7 +101,7 @@ After publishing the project:
 - Voicebot WebSocket: `wss://<your-domain>/api/public/exotel/voicebot`
 - Text/test HTTPS API: `https://<your-domain>/api/public/warimitra`
 
-Stable URLs also work: `project--<project-id>.lovable.app`.
+Stable URLs also work when the app is deployed behind a custom domain or static hosting URL.
 
 ### 3. Exotel configuration steps
 
